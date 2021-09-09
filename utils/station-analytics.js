@@ -13,6 +13,11 @@ const stationAnalytics = {
     }
     return latestReports;
   },
+  
+  getDate(station){
+    const date = new Date().toLocaleString();
+    return date;
+  },
 
   getTempF(station) {
     if (station.readings.length > 0) {
