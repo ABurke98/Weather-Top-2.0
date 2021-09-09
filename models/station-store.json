@@ -1,0 +1,102 @@
+{
+  "stationCollection": [
+    {
+      "id": "01",
+      "name": "Tramore",
+      "lat": "N23492.32",
+      "lon": "E3467.32",
+      "readings": [
+        {
+          "id": "02",
+          "code": 800,
+          "temp": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1002,
+          "windDirection": 9
+        },
+        {
+          "id": "03",
+          "code": 600,
+          "temp": 6,
+          "windSpeed": 2,
+          "pressure": 1004,
+          "windDirection": 6
+        },
+        {
+          "id": "04",
+          "code": 700,
+          "temp": 8,
+          "windSpeed": 1,
+          "pressure": 1005,
+          "windDirection": 7
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "Dunmore",
+      "lat": "N24781.32",
+      "lon": "E56878.22",
+      "readings": [
+        {
+          "id": "06",
+          "code": 700,
+          "temp": 8,
+          "windSpeed": 1,
+          "pressure": 999,
+          "windDirection": 3
+        },
+        {
+          "id": "07",
+          "code": 200,
+          "temp": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1000,
+          "windDirection": 2
+        }
+      ]
+    },
+    {
+      "id": "8fa1ea50-1103-11ec-a391-c30bf2abc2d8",
+      "userid": "694f2800-10d0-11ec-b02a-6fa435790fac",
+      "name": "Horny Jail",
+      "lat": "12341",
+      "lon": "12415",
+      "readings": [
+        {
+          "id": "b4c41120-1110-11ec-b537-cbf6d4286d6d",
+          "code": "200",
+          "temp": "23",
+          "windSpeed": 17,
+          "pressure": 1004,
+          "windDirection": 234
+        },
+        {
+          "id": "25c3cd90-1114-11ec-a40e-09741aea5cef",
+          "code": "300",
+          "temp": "10",
+          "windSpeed": 20,
+          "pressure": 999,
+          "windDirection": 340
+        }
+      ]
+    },
+    {
+      "id": "263fa690-110f-11ec-904b-3df5b5aece17",
+      "userid": "694f2800-10d0-11ec-b02a-6fa435790fac",
+      "name": "Horny Jail 2",
+      "lat": "2134",
+      "lon": "123",
+      "readings": [
+        {
+          "id": "c38e8c40-1114-11ec-b3d5-995fb73100bc",
+          "code": "300",
+          "temp": "14",
+          "windSpeed": 23,
+          "pressure": 1002,
+          "windDirection": 254
+        }
+      ]
+    }
+  ]
+}
