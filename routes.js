@@ -13,6 +13,8 @@ router.get('/', accounts.index);
 router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
+router.get('/updateuser', accounts.editview);
+router.post('/updateUser', accounts.updateUser);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 

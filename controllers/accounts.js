@@ -3,6 +3,8 @@
 const userstore = require('../models/user-store');
 const logger = require('../utils/logger');
 const uuid = require('uuid');
+const stationStore = require('../models/station-store')
+
 
 const accounts = {
 
@@ -24,12 +26,31 @@ const accounts = {
     response.cookie('playlist', '');
     response.redirect('/');
   },
+  
+    editview(request, response) {
+    const viewData = {
+      title: 'Edit your account',
+    };
+    response.render('updateuser', viewData);
+  },
 
   signup(request, response) {
     const viewData = {
       title: 'Login to the Service',
     };
     response.render('signup', viewData);
+  },
+  
+  updateUser(request, response){
+    const user = accounts.getCurrentUser(request);
+    const updatedUser = {
+      firstName: request.body.firstName,
+      lastName : request.body.lastName,
+      email : request.body.email,  
+      password : request.body.password,
+    }
+    userstore.updateUser(user, updatedUser);
+    response.redirect('/login');
   },
 
   register(request, response) {
@@ -39,7 +60,7 @@ const accounts = {
     logger.info(`registering ${user.email}`);
     response.redirect('/');
   },
-
+  
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     const password = userstore.getUserByPassword(request.body.password);

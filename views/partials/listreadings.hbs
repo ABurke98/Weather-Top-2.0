@@ -3,7 +3,7 @@
     <div class="card">
         <div class="extra">
             <h1>{{name}}</h1> <i class="red huge map marker icon"></i>                   <!--Getting data from the station model to display on the card-->
-            <h4>Latitude : {{station.lat}} <br> Longitude : {{station.lon}}  </h4>
+            <h4>Latitude : {{station.lat}} <br> Longitude : {{station.lon}}  {{date}} </h4>
         </div>
     </div>
     <div class="card">
@@ -39,6 +39,7 @@
 <table class="ui table">
   <thead>
     <tr>
+      <th>Date</th>
       <th>Code</th>
       <th>Temperature</th>
       <th>Wind Speed</th>
@@ -50,6 +51,9 @@
   <tbody>
     {{#each station.readings}}
       <tr>
+        <td>
+          {{date}}
+        </td>
         <td>
           {{code}}
         </td>

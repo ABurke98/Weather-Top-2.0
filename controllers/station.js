@@ -31,7 +31,8 @@ const station = {
       weatherInfo: stationAnalytics.getWeatherInfo(station),
       tempTrend: stationAnalytics.getTempTrend(station),
       windTrend: stationAnalytics.getWindTrend(station),
-      pressureTrend: stationAnalytics.getPressureTrend(station)
+      pressureTrend: stationAnalytics.getPressureTrend(station),
+     // date: stationAnalytics.getDate(station),
     };
     response.render("station", viewData);
   },
@@ -45,10 +46,12 @@ const station = {
   },
 
   addReading(request, response) {
+    const date = new Date().toLocaleString();
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
     const newReading = {
       id: uuid.v1(),
+      date: date,
       code: request.body.code,
       temp: request.body.temp,
       windSpeed: Number(request.body.windSpeed),
