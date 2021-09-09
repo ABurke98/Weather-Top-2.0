@@ -22,12 +22,20 @@
           "windSpeed": 2,
           "pressure": 1004,
           "windDirection": 6
+        },
+        {
+          "id": "04",
+          "code": 700,
+          "temp": 8,
+          "windSpeed": 1,
+          "pressure": 1005,
+          "windDirection": 7
         }
       ]
     },
     {
       "id": "05",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "userid" : "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "name": "Dunmore",
       "lat": "N24781.32",
       "lon": "E56878.22",
