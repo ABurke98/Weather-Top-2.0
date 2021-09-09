@@ -1,0 +1,55 @@
+{{#each stations}}
+  <section class="ui stacked segment">
+    <h2 class="ui header">
+      {{name}}
+    </h2>
+    <div class="ui inverted segment"> <!--These are our weather cards that are displayed on the dashboard view, data is left blank until user goes into station view-->
+    <div class="ui inverted five cards">
+        <div class="card">
+            <div class="extra">
+                <h1>{{name}}</h1> <i class="red huge map marker icon"></i>
+                <h4>Latitude : {{lat}} <br> Longitude : {{lon}} </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img>
+            </div>
+            <div class="extra">
+                <h3> Weather </h3>
+                <h4>  </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img>
+            </div>
+            <div class="extra">
+                <h3> Temp </h3> <i class="huge blue temperature low icon"></i>
+                <h4> {{latestReports.temp}} <br>
+                     0°F <br> Max Temp : 0°c <br> Min Temp : 0°c</h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="extra">
+                <h3> Wind </h3> <i class="huge green wind icon"></i>
+                <h4> 0 bft <br> Feels Like : 0°c
+                    <br> Min Wind : 0 kph <br> Max Wind : 0 kph  </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="extra">
+                <h3> Pressure </h3> <i class="orange huge compress arrows alternate icon"></i>
+                <h4> 0 hPa <br> Max Pressure : 0 hpa <br> Min Pressure : 0 hpa  </h4>
+            </div>
+        </div>
+    </div>
+</div>
+    <a href="/station/{{id}}" class="ui icon button">
+      <i class="icon folder open"></i>
+    </a>
+    <a href="/dashboard/deletestation/{{id}}" class="ui icon button">
+      <i class="icon trash"></i>
+    </a>
+  </section>
+{{/each}}
