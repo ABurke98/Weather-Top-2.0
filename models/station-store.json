@@ -2,6 +2,7 @@
   "stationCollection": [
     {
       "id": "01",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Tramore",
       "lat": "N23492.32",
       "lon": "E3467.32",
@@ -34,6 +35,7 @@
     },
     {
       "id": "05",
+      "userid" : "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "name": "Dunmore",
       "lat": "N24781.32",
       "lon": "E56878.22",
@@ -57,44 +59,76 @@
       ]
     },
     {
-      "id": "8fa1ea50-1103-11ec-a391-c30bf2abc2d8",
+      "id": "3e32b550-1171-11ec-9423-d9d68da55301",
       "userid": "694f2800-10d0-11ec-b02a-6fa435790fac",
-      "name": "Dunmore",
-      "lat": "12341",
-      "lon": "12415",
+      "name": "Mizen",
+      "lat": "122304.1",
+      "lon": "133445.2",
       "readings": [
         {
-          "id": "b4c41120-1110-11ec-b537-cbf6d4286d6d",
+          "id": "4f0e0be0-1171-11ec-9423-d9d68da55301",
           "code": "200",
-          "temp": "23",
-          "windSpeed": 17,
-          "pressure": 1004,
-          "windDirection": 234
+          "temp": "10",
+          "windSpeed": 5,
+          "pressure": 998,
+          "windDirection": 140
         },
         {
-          "id": "25c3cd90-1114-11ec-a40e-09741aea5cef",
-          "code": "300",
-          "temp": "10",
-          "windSpeed": 20,
-          "pressure": 999,
-          "windDirection": 340
+          "id": "55c986d0-1171-11ec-9423-d9d68da55301",
+          "code": "400",
+          "temp": "8",
+          "windSpeed": 9,
+          "pressure": 998,
+          "windDirection": 145
+        },
+        {
+          "id": "5ff178c0-1171-11ec-9423-d9d68da55301",
+          "code": "500",
+          "temp": "5",
+          "windSpeed": 14,
+          "pressure": 996,
+          "windDirection": 145
+        },
+        {
+          "id": "8ef17c10-1171-11ec-9c80-1f344ba98ed6",
+          "code": "500",
+          "temp": "2",
+          "windSpeed": 15,
+          "pressure": 996,
+          "windDirection": 145
         }
       ]
     },
     {
-      "id": "263fa690-110f-11ec-904b-3df5b5aece17",
+      "id": "471507e0-1171-11ec-9423-d9d68da55301",
       "userid": "694f2800-10d0-11ec-b02a-6fa435790fac",
-      "name": "Tramore",
-      "lat": "2134",
-      "lon": "123",
+      "name": "Malin",
+      "lat": "213444.21",
+      "lon": "13342.1",
       "readings": [
         {
-          "id": "c38e8c40-1114-11ec-b3d5-995fb73100bc",
-          "code": "300",
+          "id": "af487220-1171-11ec-9c80-1f344ba98ed6",
+          "code": "100",
+          "temp": "10",
+          "windSpeed": 6,
+          "pressure": 1004,
+          "windDirection": 124
+        },
+        {
+          "id": "b6bb5630-1171-11ec-9c80-1f344ba98ed6",
+          "code": "100",
+          "temp": "12",
+          "windSpeed": 5,
+          "pressure": 1006,
+          "windDirection": 132
+        },
+        {
+          "id": "c0e6f1a0-1171-11ec-9c80-1f344ba98ed6",
+          "code": "100",
           "temp": "14",
-          "windSpeed": 23,
-          "pressure": 1002,
-          "windDirection": 254
+          "windSpeed": 4,
+          "pressure": 1009,
+          "windDirection": 143
         }
       ]
     }

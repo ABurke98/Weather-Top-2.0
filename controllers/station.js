@@ -13,19 +13,29 @@ const station = {
     const viewData = {
       name: station.name,
       station: station,
-      latestReports : stationAnalytics.getLatestReports(station),
-      tempF : stationAnalytics.getTempF(station),
-      beaufort : stationAnalytics.getBeafourt(station),
-      maxTemp : stationAnalytics.getMaxTemp(station),
-      minTemp : stationAnalytics.getMinTemp(station),
-      maxWind : stationAnalytics.getMaxWind(station),
-      minWind : stationAnalytics.getMinWind(station),
-      windChill : stationAnalytics.getWindChill(station),
+      latestReports: stationAnalytics.getLatestReports(station),
+      tempF: stationAnalytics.getTempF(station),
+      windSpeed: stationAnalytics.getWindSpeed(station),
+      temp: stationAnalytics.getTemp(station),
+      beaufort: stationAnalytics.getBeafourt(station),
+      maxTemp: stationAnalytics.getMaxTemp(station),
+      minTemp: stationAnalytics.getMinTemp(station),
+      maxWind: stationAnalytics.getMaxWind(station),
+      minWind: stationAnalytics.getMinWind(station),
+      windChillr: stationAnalytics.getWindChill(station),
+      maxP: stationAnalytics.getMaxP(station),
+      minP: stationAnalytics.getMinP(station),
+      windDir: stationAnalytics.getWindDir(station),
+      weatherIcon: stationAnalytics.getWeatherIcon(station),
+      tempIcon: stationAnalytics.getTempIcon(station),
+      weatherInfo: stationAnalytics.getWeatherInfo(station),
+      tempTrend: stationAnalytics.getTempTrend(station),
+      windTrend: stationAnalytics.getWindTrend(station),
+      pressureTrend: stationAnalytics.getPressureTrend(station)
     };
     response.render("station", viewData);
-   
   },
-  
+
   deleteReading(request, response) {
     const stationId = request.params.id;
     const readingId = request.params.readingid;
@@ -43,13 +53,12 @@ const station = {
       temp: request.body.temp,
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
-      windDirection : Number(request.body.windDirection)
+      windDirection: Number(request.body.windDirection)
     };
     logger.debug("New Reading = ", newReading);
     stationStore.addReading(stationId, newReading);
     response.redirect("/station/" + stationId);
-  },
-}
-  
+  }
+};
 
 module.exports = station;

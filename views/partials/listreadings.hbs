@@ -8,28 +8,28 @@
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Weather </h3> <i class="blue ${_station.weatherIcon()}"></i>   <!--Getting data from the station model to display on the card-->
-            <h4> {{latestReports.code}} </h4>
+            <h3> Weather </h3> <i class="blue {{weatherIcon}}"></i>   <!--Getting data from the station model to display on the card-->
+            <h4> {{latestReports.code}}  <br> {{weatherInfo}}</h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Temp </h3> <i class="${_station.tempIcon()}"></i> <i class="blue ${_station.tempTrendIcon()}"> </i>  <!--Getting data from the station model to display on the card-->
+            <h3> Temp </h3> <i class="{{tempIcon}}"></i> <i class="blue {{tempTrend}}"></i>  <!--Getting data from the station model to display on the card-->
             <h4> {{latestReports.temp}}°c <br>
-            {{tempF}} <br> Max Temp : {{maxTemp}}° c <br> Min Temp : {{minTemp}}°c</h4>
+            {{tempF}}°F <br> Max Temp : {{maxTemp}}° c <br> Min Temp : {{minTemp}}°c</h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Wind </h3> <i class="huge green wind icon"></i> <i class="green ${_station.windTrendIcon()}"></i>  <!--Getting data from the station model to display on the card-->
-            <h4> {{beaufort}} bft <br> ${_station.getWindDir()} <br> Feels Like : {{windChill}} °c
+            <h3> Wind </h3> <i class="huge green wind icon"></i> <i class="green {{windTrend}}"></i>  <!--Getting data from the station model to display on the card-->
+            <h4> {{beaufort}} bft <br> {{windDir}} <br> Feels Like : {{windChillr}} °c
                 <br> Max Wind : {{maxWind}} kph <br> Min Wind : {{minWind}} kph  </h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Pressure </h3> <i class="orange huge compress arrows alternate icon"></i><i class="orange ${_station.pressureTrendIcon()}"></i> <!--Getting data from the station model to display on the card-->
-            <h4> ${_station.getLatestPressure()} hPa <br> Max Pressure : ${_station.getmaxP()} hpa <br> Min Pressure : ${_station.getminP()} hpa  </h4>
+            <h3> Pressure </h3> <i class="orange huge compress arrows alternate icon"></i><i class="orange {{pressureTrend}}"></i> <!--Getting data from the station model to display on the card-->
+            <h4> {{latestReports.pressure}} hPa <br> Max Pressure : {{maxP}} hpa <br> Min Pressure : {{minP}} hpa  </h4>
         </div>
     </div>
 </div>
