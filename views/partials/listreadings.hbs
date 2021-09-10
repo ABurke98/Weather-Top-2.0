@@ -2,40 +2,38 @@
     <div class="ui inverted five cards">
     <div class="card">
         <div class="extra">
-            <h1>{{name}}</h1> <i class="red huge map marker icon"></i>                   <!--Getting data from the station model to display on the card-->
+            <h1>{{name}}</h1> <i class="red huge map marker icon"></i>                   <!--Getting data from the station controller to display on the card-->
             <h4>Latitude : {{station.lat}} <br> Longitude : {{station.lon}}  {{date}} </h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Weather </h3> <i class="blue {{weatherIcon}}"></i>   <!--Getting data from the station model to display on the card-->
+            <h3> Weather </h3> <i class="blue {{weatherIcon}}"></i>   <!--Getting data from the station controller to display on the card-->
             <h4> {{latestReports.code}}  <br> {{weatherInfo}}</h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Temp </h3> <i class="{{tempIcon}}"></i> <i class="blue {{tempTrend}}"></i>  <!--Getting data from the station model to display on the card-->
+            <h3> Temp </h3> <i class="{{tempIcon}}"></i> <i class="blue {{tempTrend}}"></i>  <!--Getting data from the station controller to display on the card-->
             <h4> {{latestReports.temp}}°c <br>
             {{tempF}}°F <br> Max Temp : {{maxTemp}}° c <br> Min Temp : {{minTemp}}°c</h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Wind </h3> <i class="huge green wind icon"></i> <i class="green {{windTrend}}"></i>  <!--Getting data from the station model to display on the card-->
+            <h3> Wind </h3> <i class="huge green wind icon"></i> <i class="green {{windTrend}}"></i>  <!--Getting data from the station controller to display on the card-->
             <h4> {{beaufort}} bft <br> {{windDir}} <br> Feels Like : {{windChillr}} °c
                 <br> Max Wind : {{maxWind}} kph <br> Min Wind : {{minWind}} kph  </h4>
         </div>
     </div>
     <div class="card">
         <div class="extra">
-            <h3> Pressure </h3> <i class="orange huge compress arrows alternate icon"></i><i class="orange {{pressureTrend}}"></i> <!--Getting data from the station model to display on the card-->
+            <h3> Pressure </h3> <i class="orange huge compress arrows alternate icon"></i><i class="orange {{pressureTrend}}"></i> <!--Getting data from the station controller to display on the card-->
             <h4> {{latestReports.pressure}} hPa <br> Max Pressure : {{maxP}} hpa <br> Min Pressure : {{minP}} hpa  </h4>
         </div>
     </div>
 </div>
 </div>
-
-
 <table class="ui table">
   <thead>
     <tr>
@@ -58,16 +56,16 @@
           {{code}}
         </td>
         <td>
-          {{temp}}
+          {{temp}} 
         </td>
         <td>
-          {{windSpeed}}
+          {{windSpeed}} 
         </td>
         <td>
-          {{windDirection}}
+          {{windDirection}} 
         </td>
         <td>
-          {{pressure}}
+          {{pressure}} 
         </td>
         <td>
           <a href="/station/{{../station.id}}/deletereading/{{id}}" class="ui icon button">
@@ -78,3 +76,31 @@
     {{/each}}
   </tbody>
 </table>
+
+  <div class="ui segment" id="chart"></div>         <!--Javascript for displaying the Frappe chart in the station, it gets data from the station controller from the API request-->
+<script>
+  const data = {
+    labels: [
+      {{#each reading.trendLabels}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Temperature", type: "line",
+        values: [
+          {{#each reading.tempTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+
+  const chart = new frappe.Chart("#chart", {
+    title: "Temperature Trend",
+    data: data,
+    type: 'line',
+    height: 250,
+  })
+</script>
