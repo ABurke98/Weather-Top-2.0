@@ -1,4 +1,4 @@
-"use strict";
+"use strict";                              //About Controller for sending date to the about view
 
 const logger = require("../utils/logger");
 

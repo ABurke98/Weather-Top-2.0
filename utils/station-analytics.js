@@ -2,8 +2,8 @@
 
 const station = require("../controllers/station");
 const readings = require("../controllers/reading");
-const stationAnalytics = {
-  getLatestReports(station) {
+const stationAnalytics = {                 //Station-Analytics has all of our function relating to the analytics
+  getLatestReports(station) {   //Latest Reports loops through the stations readings and then gets the last value entered for whichever property you need
     let latestReports = null;
     if (station.readings.length > 0) {
       latestReports = station.readings[0];
@@ -14,12 +14,21 @@ const stationAnalytics = {
     return latestReports;
   },
   
-  getDate(station){
+  getLat(station){         
+    return station.lat; 
+  },
+  
+  getLon(station){
+    return station.lon; 
+  },
+
+  
+  getDate(station){                            //This function is creating our date object and then using .toLocaleString to get accurate time information for our locale
     const date = new Date().toLocaleString();
     return date;
   },
-
-  getTempF(station) {
+  
+  getTempF(station) {                              //This function takes in the most recent temperature and then calculates it so that we can get the Farrenheit data.
     if (station.readings.length > 0) {
       let tempF = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
@@ -29,7 +38,9 @@ const stationAnalytics = {
     }
   },
 
-  getMaxTemp(station) {
+  getMaxTemp(station) {                                   //This function is getting the maximum temperature in a station, we are going through the readings list
+                                                          // and checking to see if the current reading is higher then the maxTemp and if so we are making that one
+                                                          // the new maxTemp, at the end we return it so that we can display it on our weather card
     if (station.readings.length > 0) {
       let maxTemp = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
@@ -45,7 +56,9 @@ const stationAnalytics = {
     }
   },
 
-  getMinTemp(station) {
+  getMinTemp(station) {                                     //This function is getting the minimum temperature in a station, we are going through the readings list
+                                                           //and checking to see if the current reading is lower then the minTemp and if so we are making that one
+                                                          //the new minTemp, at the end we return it so that we can display it on our weather card
     if (station.readings.length > 0) {
       let maxTemp = stationAnalytics.getMaxTemp(station);
       let minTemp = maxTemp;
@@ -61,8 +74,10 @@ const stationAnalytics = {
       return minTemp;
     }
   },
-
-  getBeafourt(station) {
+ 
+  getBeafourt(station) {                           //The beaufort function goes through the readings list and grabs the most recent windspeed, with that data
+                                                   //it is checked to see where it falls within a range of values, depending on the value of the windspeed
+                                                  //we can update the beaufort variable, at the end we return the beaufort value which we can use for display.
     if (station.readings.length > 0) {
       let beafourt = 0;
       let windSpeed = 0;
@@ -99,7 +114,9 @@ const stationAnalytics = {
     }
   },
 
-  getWindDir(station) {
+  getWindDir(station) {                                            //This function is similar to the beaufort function, we are taking in the most recent wind direction
+                                                                   //that data is checked against a range of values and depending on the data we update the windDir String and
+                                                                   //return it so that we can display it on our Weather cards.
     if (station.readings.length > 0) {
       let windDir = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
@@ -143,7 +160,9 @@ const stationAnalytics = {
     }
   },
 
-  getMaxP(station) {
+  getMaxP(station) {                                                   //This function is getting the maximum pressure in a station, we are going through the readings list
+                                                                       //and checking to see if the current reading is higer then the maxPressure and if so we are making that one
+                                                                       //the new maxPressure, at the end we return it so that we can display it on our weather card
     if (station.readings.length > 0) {
       let maxP = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
@@ -159,7 +178,9 @@ const stationAnalytics = {
     }
   },
 
-  getMinP(station) {
+  getMinP(station) {                                                  //This function is getting the minimum pressure in a station, we are going through the readings list
+                                                                      //and checking to see if the current reading is lower then the minPressure and if so we are making that one
+                                                                      //the new minPressure, at the end we return it so that we can display it on our weather card
     if (station.readings.length > 0) {
       let maxP = stationAnalytics.getMaxP(station);
       let minP = maxP;
@@ -175,9 +196,11 @@ const stationAnalytics = {
       return minP;
     }
   },
-
-  getMaxWind(station) {
-    if (station.readings.length > 0) {
+ 
+  getMaxWind(station) {                                                //This function is getting the maximum wind speed in a station, we are going through the readings list
+                                                                       //and checking to see if the current reading is higher then the maxWind and if so we are making that one
+                                                                       //the new maxWind, at the end we return it so that we can display it on our weather card
+    if (station.readings.length > 0) { 
       let maxWind = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
       if (station.readings.length > 0) {
@@ -192,7 +215,9 @@ const stationAnalytics = {
     }
   },
 
-  getMinWind(station) {
+  getMinWind(station) {                                                //This function is getting the minimum wind speed in a station, we are going through the readings list
+                                                                       //and checking to see if the current reading is higher then the maxWind and if so we are making that one
+                                                                       //the new maxWind, at the end we return it so that we can display it on our weather card
     if (station.readings.length > 0) {
       let maxWind = stationAnalytics.getMaxWind(station);
       let minWind = maxWind;
@@ -209,7 +234,8 @@ const stationAnalytics = {
     }
   },
 
-  getWindSpeed(station) {
+  getWindSpeed(station) {                                              //This function is getting the most recent wind speed in a station, we are using the latestReport function to pull
+                                                                       //the data and then we are updating the windSpeed accordingly
     if (station.readings.length > 0) {
       let windSpeed = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
@@ -218,7 +244,8 @@ const stationAnalytics = {
     }
   },
 
-  getTemp(station) {
+  getTemp(station) {                                                   //This function is getting the most recent temperature in a station, we are using the latestReport function to pull
+                                                                       //the data and then we are updating the temp accordingly
     if (station.readings.length > 0) {
       let temp = 0;
       let latestReports = stationAnalytics.getLatestReports(station);
@@ -227,7 +254,7 @@ const stationAnalytics = {
     }
   },
 
-  getWindChill(station) {
+  getWindChill(station) {                                          //The getWindChill function is taking in our windSpeed and temp and then running calculations on it to get the windChill value 
     if (station.readings.length > 0) {
       let wSpeed = stationAnalytics.getWindSpeed(station);
       let tempC = stationAnalytics.getTemp(station);
@@ -242,7 +269,8 @@ const stationAnalytics = {
     }
   },
 
-  getWeatherIcon(station) {
+  getWeatherIcon(station) {                                     //This function is taking in the most recent weather code from the station and then and then checking to see what the value is, if it matches any of the expected
+                                                                //results then the icon on the card will update accordingly
     if (station.readings.length > 0) {
       let wCode = 0;
       let wDescription = " ";
@@ -274,11 +302,15 @@ const stationAnalytics = {
         wIcon += "huge bolt icon";
         wDescription += "Thunder ";
       }
+      else{
+        wIcon +="huge cloud icon";
+      }
       return wIcon;
     }
   },
 
-  getWeatherInfo(station) {
+  getWeatherInfo(station) {                                      //This function is corresponds with the weatherIcon, the difference in this one is that we are utilising
+                                                                 //the most recent weather code and then updating the string for the weather type.
     if (station.readings.length > 0) {
       let wCode = 0;
       let wDescription = " ";
@@ -301,11 +333,15 @@ const stationAnalytics = {
       } else if (wCode == 800) {
         wDescription += "Thunder ";
       }
+      else{
+        wDescription +="Unsettled"
+      }
       return wDescription;
     }
   },
 
-  getTempIcon(station) {
+  getTempIcon(station) {                       //Similar to the weatherIcon function, in this function we are just checking to see if the most recent temperature is higher or lower than 15 degree, depending on which one
+                                               //we update the temperature icon
     if (station.readings.length > 0) {
       let temp = 0;
       let tempIcon = " ";
@@ -320,7 +356,7 @@ const stationAnalytics = {
     }
   },
 
-  getTempTrend(station) {
+  getTempTrend(station) {                                      //This function is taking in the 3 most recent reports for temperature, we check to see if there is an upward trend, downward trend or neutral trend
     if (station.readings.length >= 3) {
       let trendIcon = " ";
       let t1 = station.readings[station.readings.length - 1];           
@@ -337,7 +373,7 @@ const stationAnalytics = {
     }
   },
   
-  getWindTrend(station) {
+  getWindTrend(station) {                                 //This function is taking in the 3 most recent reports for wind speed, we check to see if there is an upward trend, downward trend or neutral trend
     if (station.readings.length >= 3) {
       let trendIcon = " ";
       let t1 = station.readings[station.readings.length - 1];           
@@ -354,7 +390,7 @@ const stationAnalytics = {
     }
   },
   
-  getPressureTrend(station) {
+  getPressureTrend(station) {                                     //This function is taking in the 3 most recent reports for pressure, we check to see if there is an upward trend, downward trend or neutral trend
     if (station.readings.length >= 3) {
       let trendIcon = " ";
       let t1 = station.readings[station.readings.length - 1];           

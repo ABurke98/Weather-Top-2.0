@@ -1,5 +1,5 @@
 {
-  "name": "Weather Top 2.0",
+  "name": "WeatherTop2.0",
   "version": "0.0.1",
   "description": "An updated Javascript version of WeatherTop",
   "main": "server.js",
@@ -16,7 +16,9 @@
     "lodash": "^4.17.15",
     "lowdb": "^1.0.0",
     "uuid": "^8.0.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "axios": "^0.21.4",
+    "leaflet": "^1.7.1"
   },
   "engines": {
     "node": "12.x"

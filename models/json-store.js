@@ -1,6 +1,6 @@
 "use strict";
 
-const low = require("lowdb");
+const low = require("lowdb");                          //Utilising fileSync as well as lowdb, for useful function that we can use relating to data stores.
 const FileSync = require("lowdb/adapters/FileSync");
 
 class JsonStore {
@@ -9,7 +9,7 @@ class JsonStore {
     this.db = low(adapter);
     this.db.defaults(defaults).value();
   }
-
+                                           //Most of these functions are taking in our collection list and manipulating it in various ways, saving/deleting/updating etc.
   save() {
     this.db.write();
   }

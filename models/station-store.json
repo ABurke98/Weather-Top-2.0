@@ -28,83 +28,173 @@
       ]
     },
     {
-      "id": "05",
+      "id": "0e428560-1210-11ec-98d9-5d2af859a8dc",
       "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "name": "Dunmore",
-      "lat": "N24781.32",
-      "lon": "E56878.22",
+      "lat": "51.24551",
+      "lon": "-13.12344",
       "readings": [
         {
-          "id": "06",
-          "date": 22042021,
-          "code": 700,
-          "temp": 8,
-          "windSpeed": 1,
-          "pressure": 999,
-          "windDirection": 3
-        },
-        {
-          "id": "07",
-          "date": 22042021,
-          "code": 200,
-          "temp": 0.5,
-          "windSpeed": 3.5,
-          "pressure": 1000,
-          "windDirection": 2
+          "id": "10948bb0-1210-11ec-98d9-5d2af859a8dc",
+          "date": "9/10/2021, 8:21:14 AM",
+          "code": 804,
+          "temp": 16.35,
+          "windSpeed": 4.34,
+          "pressure": 1013,
+          "windDirection": 318
         }
       ]
     },
     {
-      "id": "3e32b550-1171-11ec-9423-d9d68da55301",
+      "id": "603a4ae0-121c-11ec-b852-f9b27f92fd1b",
       "userid": "694f2800-10d0-11ec-b02a-6fa435790fac",
-      "name": "Mizen",
-      "lat": "122304.1",
-      "lon": "133445.2",
+      "name": "Mizen Head",
+      "lat": "51.456959",
+      "lon": "-9.800208",
       "readings": [
         {
-          "id": "e4630ef0-1191-11ec-a4ce-cd67265e1047",
-          "date": "9/9/2021, 5:18:04 PM",
-          "code": "300",
-          "temp": "18",
-          "windSpeed": 5,
-          "pressure": 1004,
-          "windDirection": 234
+          "id": "681b3300-121c-11ec-b852-f9b27f92fd1b",
+          "date": "9/10/2021, 9:49:35 AM",
+          "code": 804,
+          "temp": 15.25,
+          "windSpeed": 9.26,
+          "pressure": 1012,
+          "windDirection": 300
+        },
+        {
+          "id": "7f3dbee0-121c-11ec-b852-f9b27f92fd1b",
+          "date": "9/10/2021, 9:50:07 AM",
+          "code": 804,
+          "temp": 15.25,
+          "windSpeed": 9.26,
+          "pressure": 1012,
+          "windDirection": 300
+        },
+        {
+          "id": "f0fc8bf0-1227-11ec-8122-c5f5d73fec11",
+          "date": "9/10/2021, 11:12:09 AM",
+          "code": 804,
+          "temp": 15.21,
+          "windSpeed": 8.76,
+          "pressure": 1013,
+          "windDirection": 299
+        },
+        {
+          "id": "3c55cad0-1228-11ec-bfbb-afb8256e548a",
+          "date": "9/10/2021, 11:14:15 AM",
+          "code": 804,
+          "temp": 15.21,
+          "windSpeed": 8.76,
+          "pressure": 1013,
+          "windDirection": 299
+        },
+        {
+          "id": "a3718380-1228-11ec-bfbb-afb8256e548a",
+          "date": "9/10/2021, 11:17:08 AM",
+          "code": 804,
+          "temp": 15.21,
+          "windSpeed": 8.76,
+          "pressure": 1013,
+          "windDirection": 299
+        },
+        {
+          "id": "708d24a0-1229-11ec-ac55-7bdeb46db1ab",
+          "date": "9/10/2021, 11:22:52 AM",
+          "code": 804,
+          "temp": 15.21,
+          "windSpeed": 8.76,
+          "pressure": 1013,
+          "windDirection": 299
+        },
+        {
+          "id": "aaf209e0-122d-11ec-9914-7defadd12d84",
+          "date": "9/10/2021, 11:53:08 AM",
+          "code": 804,
+          "temp": 15.3,
+          "windSpeed": 9.18,
+          "pressure": 1013,
+          "windDirection": 302
         }
       ]
     },
     {
-      "id": "471507e0-1171-11ec-9423-d9d68da55301",
+      "id": "805a69c0-122d-11ec-ad5a-a1a00b00ec6d",
       "userid": "694f2800-10d0-11ec-b02a-6fa435790fac",
-      "name": "Malin",
-      "lat": "213444.21",
-      "lon": "13342.1",
+      "name": "Malin Head",
+      "lat": "55.381830",
+      "lon": "-7.374242",
       "readings": [
         {
-          "id": "af487220-1171-11ec-9c80-1f344ba98ed6",
-          "date": 22042021,
-          "code": "100",
-          "temp": "10",
-          "windSpeed": 6,
-          "pressure": 1004,
-          "windDirection": 124
+          "id": "83bdb900-122d-11ec-ad5a-a1a00b00ec6d",
+          "date": "9/10/2021, 11:52:02 AM",
+          "code": 804,
+          "temp": 19,
+          "windSpeed": 2.86,
+          "pressure": 1008,
+          "windDirection": 290
         },
         {
-          "id": "b6bb5630-1171-11ec-9c80-1f344ba98ed6",
-          "date": 22042021,
-          "code": "100",
-          "temp": "12",
-          "windSpeed": 5,
-          "pressure": 1006,
-          "windDirection": 132
-        },
-        {
-          "id": "c0e6f1a0-1171-11ec-9c80-1f344ba98ed6",
-          "date": 22042021,
-          "code": "100",
-          "temp": "14",
-          "windSpeed": 4,
+          "id": "d87b4ee0-1231-11ec-b230-c50a1da36528",
+          "date": "9/10/2021, 12:23:03 PM",
+          "code": "200",
+          "temp": "21",
+          "windSpeed": 122,
           "pressure": 1009,
-          "windDirection": 143
+          "windDirection": 270
+        },
+        {
+          "id": "e01fa330-1231-11ec-b230-c50a1da36528",
+          "date": "9/10/2021, 12:23:16 PM",
+          "code": 804,
+          "temp": 19,
+          "windSpeed": 2.86,
+          "pressure": 1008,
+          "windDirection": 290
+        },
+        {
+          "id": "354dd200-1232-11ec-98b5-8d5e64cc1054",
+          "date": "9/10/2021, 12:25:38 PM",
+          "code": 804,
+          "temp": 19,
+          "windSpeed": 2.86,
+          "pressure": 1008,
+          "windDirection": 290
+        },
+        {
+          "id": "e48e3600-1233-11ec-9fe7-b52b182724b7",
+          "date": "9/10/2021, 12:37:42 PM",
+          "code": 804,
+          "temp": 19,
+          "windSpeed": 3.24,
+          "pressure": 1008,
+          "windDirection": 297
+        },
+        {
+          "id": "d858a450-1234-11ec-9fe7-b52b182724b7",
+          "date": "9/10/2021, 12:44:31 PM",
+          "code": 804,
+          "temp": 19,
+          "windSpeed": 3.24,
+          "pressure": 1008,
+          "windDirection": 297
+        },
+        {
+          "id": "1488a010-124e-11ec-bda8-4550fd55e220",
+          "date": "9/10/2021, 3:45:09 PM",
+          "code": 804,
+          "temp": 18,
+          "windSpeed": 3.14,
+          "pressure": 1009,
+          "windDirection": 303
+        },
+        {
+          "id": "99275c60-1250-11ec-b975-2dcb5ac75205",
+          "date": "9/10/2021, 4:03:11 PM",
+          "code": 804,
+          "temp": 17,
+          "windSpeed": 3.14,
+          "pressure": 1009,
+          "windDirection": 303
         }
       ]
     }
